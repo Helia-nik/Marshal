@@ -1,4 +1,57 @@
-
+/**************************font*****************/
+@font-face {
+    font-family: Vazir FD;
+    font-weight: normal;
+    src: url("./fonts/Vazir-FD.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: Vazir FD;
+    font-weight: bold;
+    src: url("./fonts/Vazir-Bold-FD.woff2") format("woff2"),
+  }
+  
+  @font-face {
+    font-family: Vazir FD;
+    font-weight: 300;
+    src: url("./fonts/") format("woff2"),
+      
+  }
+  
+  @font-face {
+    font-family: Vazir FD;
+    font-weight: 500;
+    src: url("./fonts/Vazir-Medium-FD.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: Vazir FD;
+    font-weight: 900;
+    src: url("./fonts/Vazir-Black-FD.woff2") format("woff2");
+  }
+ 
+  
+  @font-face {
+    font-family: peyda;
+    font-style: normal;
+    font-weight: 800;
+    src: url("./fonts/PeydaWeb-ExtraBold.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: peyda;
+    font-style: normal;
+    font-weight: 900;
+    src: url("./fonts/PeydaWeb-Black.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: peyda;
+    font-style: normal;
+    font-weight: bold;
+    src: url("./fonts/PeydaWeb-Bold.woff2") format("woff2");
+  }
+/*******************body************************************/
 * {
     box-sizing: border-box;
   margin: 0;
@@ -6,43 +59,57 @@
 }
 body{
     direction: rtl;
+    background-color: #f8f9fd;
+    font-family: Vazir FD !important; 
 }
-
+/**********************************header*****************************/
 header section{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     font-size: 14px;
     font-weight: 500;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
 }
 .navbar{
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
     padding-top: 20px;
-    width: 73%;
+    width: 71.5%;
     justify-content: space-between;
     height: 84px;
+   
 }
 .logo{
     width:115px;
+    padding-bottom: 20px;
 }
 .download{
     background-color:#3979D9;
     border-radius: 100px;
     font-size: 14px;
-    padding: 10px 13px 9px 21px;
+    padding: 8px 13px 10px 23px;
     transition: all ease .3s;
     height: 35px;
     display: flex;
     color: white;
     align-items: center;
-    transition: all ease .3s;
 }
 header .btn{
     margin-bottom: 20px;
+    transition: all ease .3s;
 }
+header .btn span{
+    padding-top: 5px;
+    margin-left: 7px;
+}
+
 .jump:hover{
     transform: translateY(-5px);
     box-shadow: 0px 3px 25px 0px rgb(0 0 0 / 9%);
@@ -51,7 +118,7 @@ header .btn{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 70%;
+    width: 72%;
     margin-bottom: 20px;
 }
 .menu-link{
@@ -59,6 +126,8 @@ header .btn{
     color:#464646;
     text-decoration: none;
     transition: .4s;
+    font-size: 14px;
+    font-weight: 500;
 }
 .menu-link:hover{
     color: #3979D9;
@@ -72,16 +141,102 @@ header .btn{
     background-repeat: no-repeat;
     background-size: cover;
     height: 611px;
+    margin-top: 84px;
 }
 .tehran h1{
     width: 25%;
-    font-size: 42px;
-    margin-right: 200px;
-    padding-top: 166px;
+    font-size: 44px ;
+    margin-right: 280px;
+    padding-top: 160px;
     color: #262626;
+    font-family: peyda;
+    font-weight: 900;
     line-height: 48px;
+}
+
+.m1{
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   max-width: 1140px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.m1-img{
+    margin: 10px;
+    width: 50%;
+}
+.m1-img img{
+    float: left;
+    padding-left: 40px;
+}
+.m1-text{
+    margin: 10px;
+    width: 50%;
+}
+.m1-text h1{
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 32px;
+    font-weight: 800;
+    font-family: peyda;
+}
+
+.m1-text p{
+    font-size: 16px;
+    font-weight: 400;
+   
+}
+.m1-btn{
+    margin-top: 40px;
+}
+.m1-text .btn{
+    background-color:#3979D9;
+    border-radius: 100px;
+    transition: all ease .3s;
+    height: 45px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.m1-text .btn a{
+    text-decoration: none;
+    display: flex;
+    color: white;
+    padding-top: 5px;
 }
 
 
 
+
+/*******************footer*******************/
+.karzar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:#222222;
+    height: 60px;
+    color: #FFFFFF;
+}
+.karzar div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.karzar a{
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: #1976D2;
+    border-radius: 10px;
+    padding: 3px 15px;
+}
 
