@@ -66,3 +66,22 @@ header .btn{
 
 
 
+.tehran{
+    background-image: url(./image/tehran.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 611px;
+}
+.tehran h1{
+    width: 25%;
+    font-size: 42px;
+    margin-right: 200px;
+    padding-top: 166px;
+    color: #262626;
+    line-height: 48px;
+}
+
+
+
+
