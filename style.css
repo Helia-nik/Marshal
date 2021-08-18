@@ -1,69 +1,75 @@
 /**************************font*****************/
+
 @font-face {
     font-family: Vazir FD;
     font-weight: normal;
     src: url("./fonts/Vazir-FD.woff2") format("woff2");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Vazir FD;
     font-weight: bold;
     src: url("./fonts/Vazir-Bold-FD.woff2") format("woff2"),
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Vazir FD;
     font-weight: 300;
     src: url("./fonts/") format("woff2"),
-      
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Vazir FD;
     font-weight: 500;
     src: url("./fonts/Vazir-Medium-FD.woff2") format("woff2");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Vazir FD;
     font-weight: 900;
     src: url("./fonts/Vazir-Black-FD.woff2") format("woff2");
-  }
- 
-  
-  @font-face {
+}
+
+@font-face {
     font-family: peyda;
     font-style: normal;
     font-weight: 800;
     src: url("./fonts/PeydaWeb-ExtraBold.woff2") format("woff2");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: peyda;
     font-style: normal;
     font-weight: 900;
     src: url("./fonts/PeydaWeb-Black.woff2") format("woff2");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: peyda;
     font-style: normal;
     font-weight: bold;
     src: url("./fonts/PeydaWeb-Bold.woff2") format("woff2");
-  }
+}
+
+
 /*******************body************************************/
+
 * {
     box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
-body{
+
+body {
     direction: rtl;
     background-color: #f8f9fd;
-    font-family: Vazir FD !important; 
+    font-family: Vazir FD !important;
 }
+
+
 /**********************************header*****************************/
-header section{
+
+header section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +82,8 @@ header section{
     right: 0;
     background-color: #FFFFFF;
 }
-.navbar{
+
+.navbar {
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -84,14 +91,15 @@ header section{
     width: 71.5%;
     justify-content: space-between;
     height: 84px;
-   
 }
-.logo{
-    width:115px;
+
+.logo {
+    width: 115px;
     padding-bottom: 20px;
 }
-.download{
-    background-color:#3979D9;
+
+.download {
+    background-color: #3979D9;
     border-radius: 100px;
     font-size: 14px;
     padding: 8px 13px 10px 23px;
@@ -101,41 +109,44 @@ header section{
     color: white;
     align-items: center;
 }
-header .btn{
+
+header .btn {
     margin-bottom: 20px;
     transition: all ease .3s;
 }
-header .btn span{
+
+header .btn span {
     padding-top: 5px;
     margin-left: 7px;
 }
 
-.jump:hover{
+.jump:hover {
     transform: translateY(-5px);
     box-shadow: 0px 3px 25px 0px rgb(0 0 0 / 9%);
 }
-.menu{
+
+.menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 72%;
     margin-bottom: 20px;
 }
-.menu-link{
+
+.menu-link {
     padding: 13px 15px;
-    color:#464646;
+    color: #464646;
     text-decoration: none;
     transition: .4s;
     font-size: 14px;
     font-weight: 500;
 }
-.menu-link:hover{
+
+.menu-link:hover {
     color: #3979D9;
 }
 
-
-
-.tehran{
+.tehran {
     background-image: url(./image/tehran.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -143,9 +154,10 @@ header .btn span{
     height: 611px;
     margin-top: 84px;
 }
-.tehran h1{
+
+.tehran h1 {
     width: 25%;
-    font-size: 44px ;
+    font-size: 44px;
     margin-right: 280px;
     padding-top: 160px;
     color: #262626;
@@ -154,28 +166,31 @@ header .btn span{
     line-height: 48px;
 }
 
-.m1{
-   display: flex;
-   align-items: center;
-   margin-top: 20px;
-   max-width: 1140px;
-   margin-left: auto;
-   margin-right: auto;
+.m1 {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.m1-img{
+.m1-img {
     margin: 10px;
     width: 50%;
 }
-.m1-img img{
+
+.m1-img img {
     float: left;
     padding-left: 40px;
 }
-.m1-text{
+
+.m1-text {
     margin: 10px;
     width: 50%;
 }
-.m1-text h1{
+
+.m1-text h1 {
     margin-bottom: 20px;
     color: #000000;
     font-size: 32px;
@@ -183,16 +198,17 @@ header .btn span{
     font-family: peyda;
 }
 
-.m1-text p{
+.m1-text p {
     font-size: 16px;
     font-weight: 400;
-   
 }
-.m1-btn{
+
+.m1-btn {
     margin-top: 40px;
 }
-.m1-text .btn{
-    background-color:#3979D9;
+
+.m1-text .btn {
+    background-color: #3979D9;
     border-radius: 100px;
     transition: all ease .3s;
     height: 45px;
@@ -201,7 +217,8 @@ header .btn span{
     align-items: center;
     justify-content: center;
 }
-.m1-text .btn a{
+
+.m1-text .btn a {
     text-decoration: none;
     display: flex;
     color: white;
@@ -209,10 +226,101 @@ header .btn span{
 }
 
 
+/* ---------main2------ */
+
+.main2 {
+    width: 100%;
+    background-color: #f8f9fd;
+    display: flex;
+    justify-content: center;
+}
+
+.main h2 {
+    font-family: peyda;
+    font-weight: 900;
+}
+
+.blue-container {
+    background-color: rgb(57, 121, 217);
+    border-radius: 30px;
+    width: 1140px;
+    height: 1171.45px;
+    margin-top: 70px;
+    position: relative;
+}
+
+.b-content {
+    width: 1140px;
+    height: 1171.45px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -55px
+}
+
+.b-section {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-around;
+}
+
+.b-images {
+    width: 357px;
+    height: 357px;
+    position: relative;
+}
+
+.b-images h2 {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: peyda;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.b-text {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.b-text h2 {
+    font-family: peyda;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.b-text p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.b-image1 {
+    background-image: url("/image/image-4.png");
+}
+
+.b-image2 {
+    background-image: url("/image/image-5.png");
+    width: 357px;
+    height: 357px;
+}
+
+.b-image3 {
+    background-image: url("/image/image-6.png");
+    width: 357px;
+    height: 357px;
+}
 
 
 /*******************footer*******************/
-.karzar{
+
+.karzar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,16 +330,18 @@ header .btn span{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color:#222222;
+    background-color: #222222;
     height: 60px;
     color: #FFFFFF;
 }
-.karzar div{
+
+.karzar div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.karzar a{
+
+.karzar a {
     margin-right: 20px;
     text-decoration: none;
     background-color: #FFFFFF;
@@ -239,4 +349,3 @@ header .btn span{
     border-radius: 10px;
     padding: 3px 15px;
 }
-
