@@ -3,66 +3,75 @@
     font-family: Vazir FD;
     font-weight: normal;
     src: url("./fonts/Vazir-FD.woff2") format("woff2");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Vazir FD;
     font-weight: bold;
     src: url("./fonts/Vazir-Bold-FD.woff2") format("woff2"),
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Vazir FD;
     font-weight: 300;
     src: url("./fonts/") format("woff2"),
-      
-  }
-  
-  @font-face {
+
+}
+
+@font-face {
     font-family: Vazir FD;
     font-weight: 500;
     src: url("./fonts/Vazir-Medium-FD.woff2") format("woff2");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Vazir FD;
     font-weight: 900;
     src: url("./fonts/Vazir-Black-FD.woff2") format("woff2");
-  }
- 
-  
-  @font-face {
+}
+
+
+@font-face {
     font-family: peyda;
     font-style: normal;
     font-weight: 800;
     src: url("./fonts/PeydaWeb-ExtraBold.woff2") format("woff2");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: peyda;
     font-style: normal;
     font-weight: 900;
     src: url("./fonts/PeydaWeb-Black.woff2") format("woff2");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: peyda;
     font-style: normal;
     font-weight: bold;
     src: url("./fonts/PeydaWeb-Bold.woff2") format("woff2");
-  }
+}
+
+
 /*******************body************************************/
+
 * {
     box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body{
     direction: rtl;
     background-color: #f8f9fd;
-    font-family: Vazir FD !important; 
+    font-family: Vazir FD !important;
 }
+
+
+
+
+
 /**********************************header*****************************/
+
 header section{
     display: flex;
     align-items: center;
@@ -84,8 +93,9 @@ header section{
     width: 71.5%;
     justify-content: space-between;
     height: 84px;
-   
+
 }
+
 .logo{
     width:115px;
     padding-bottom: 20px;
@@ -155,18 +165,19 @@ header .btn span{
 }
 
 .m1{
-   display: flex;
-   align-items: center;
-   margin-top: 20px;
-   max-width: 1140px;
-   margin-left: auto;
-   margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .m1-img{
     margin: 10px;
     width: 50%;
 }
+
 .m1-img img{
     float: left;
     padding-left: 40px;
@@ -186,7 +197,7 @@ header .btn span{
 .m1-text p{
     font-size: 16px;
     font-weight: 400;
-   
+
 }
 .m1-btn{
     margin-top: 40px;
@@ -336,3 +347,94 @@ footer h4{
 .footer-p span{
     color:  #0274be;
 }
+/* ---------main2------ */
+
+.main2 {
+    width: 100%;
+    background-color: #f8f9fd;
+    display: flex;
+    justify-content: center;
+}
+
+.main h2 {
+    font-family: peyda;
+    font-weight: 900;
+}
+
+.blue-container {
+    background-color: rgb(57, 121, 217);
+    border-radius: 30px;
+    width: 1140px;
+    height: 1171.45px;
+    margin-top: 70px;
+    position: relative;
+}
+
+.b-content {
+    width: 1140px;
+    height: 1171.45px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -55px
+}
+
+.b-section {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-around;
+}
+
+.b-images {
+    width: 357px;
+    height: 357px;
+    position: relative;
+}
+
+.b-images h2 {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: peyda;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.b-text {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.b-text h2 {
+    font-family: peyda;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.b-text p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.b-image1 {
+    background-image: url("/image/image-4.png");
+}
+
+.b-image2 {
+    background-image: url("/image/image-5.png");
+    width: 357px;
+    height: 357px;
+}
+
+.b-image3 {
+    background-image: url("/image/image-6.png");
+    width: 357px;
+    height: 357px;
+}
+
