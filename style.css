@@ -140,7 +140,7 @@ header .btn span{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 611px;
+    height: 690px;
     margin-top: 84px;
 }
 .tehran h1{
@@ -209,19 +209,14 @@ header .btn span{
 }
 
 
-
-
-/*******************footer*******************/
 .karzar{
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 15px;
-    position: fixed;
-    z-index: 99;
+    position: sticky;
     bottom: 0;
-    left: 0;
-    right: 0;
+    z-index: 99;
     background-color:#222222;
     height: 60px;
     color: #FFFFFF;
@@ -237,6 +232,107 @@ header .btn span{
     background-color: #FFFFFF;
     color: #1976D2;
     border-radius: 10px;
-    padding: 3px 15px;
+    padding: 3.5px 15px;
 }
 
+/*******************footer*******************/
+
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.f1{
+    padding-right: 10px;
+}
+
+.f1{
+    width: 25%;
+}
+
+
+.f2{
+    width: 25%;
+    padding-right: 20px;
+}
+.f2 li, .f1 li{
+    list-style: none;
+    padding: 6px 0px;
+    color: #404040;
+    font-size: 15px;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.f3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 300px;
+    padding-right: 10px;
+}
+.address{
+    color: #404040;
+}
+.f3-2{
+    margin-top: 25px;
+}
+.f3-3{
+    margin-top: 10px;
+}
+.telegram span, .mail span{
+   position: relative;
+   top: 3px;
+}
+footer h4{
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.f4{
+    background-color: #EFF1FA;
+    margin-right: 30px;
+    border-radius: 15px;
+    position:relative;
+    width: 260px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    padding-right: 10px;
+
+}
+.f4 img{
+    bottom: 65px;
+    position:absolute;
+    z-index: 134;
+}
+.f4 p{
+    font-family: 'peyda';
+    color: #4A529E;
+    max-width: 165px;
+    bottom: 8px;
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    line-height: 2;
+}
+
+.footer-p{
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.footer-p span{
+    color:  #0274be;
+}
