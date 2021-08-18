@@ -1,5 +1,4 @@
 /**************************font*****************/
-
 @font-face {
     font-family: Vazir FD;
     font-weight: normal;
@@ -16,6 +15,7 @@
     font-family: Vazir FD;
     font-weight: 300;
     src: url("./fonts/") format("woff2"),
+
 }
 
 @font-face {
@@ -29,6 +29,7 @@
     font-weight: 900;
     src: url("./fonts/Vazir-Black-FD.woff2") format("woff2");
 }
+
 
 @font-face {
     font-family: peyda;
@@ -59,17 +60,19 @@
     margin: 0;
     padding: 0;
 }
-
-body {
+body{
     direction: rtl;
     background-color: #f8f9fd;
     font-family: Vazir FD !important;
 }
 
 
+
+
+
 /**********************************header*****************************/
 
-header section {
+header section{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,8 +85,7 @@ header section {
     right: 0;
     background-color: #FFFFFF;
 }
-
-.navbar {
+.navbar{
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -91,15 +93,15 @@ header section {
     width: 71.5%;
     justify-content: space-between;
     height: 84px;
+
 }
 
-.logo {
-    width: 115px;
+.logo{
+    width:115px;
     padding-bottom: 20px;
 }
-
-.download {
-    background-color: #3979D9;
+.download{
+    background-color:#3979D9;
     border-radius: 100px;
     font-size: 14px;
     padding: 8px 13px 10px 23px;
@@ -109,55 +111,51 @@ header section {
     color: white;
     align-items: center;
 }
-
-header .btn {
+header .btn{
     margin-bottom: 20px;
     transition: all ease .3s;
 }
-
-header .btn span {
+header .btn span{
     padding-top: 5px;
     margin-left: 7px;
 }
 
-.jump:hover {
+.jump:hover{
     transform: translateY(-5px);
     box-shadow: 0px 3px 25px 0px rgb(0 0 0 / 9%);
 }
-
-.menu {
+.menu{
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 72%;
     margin-bottom: 20px;
 }
-
-.menu-link {
+.menu-link{
     padding: 13px 15px;
-    color: #464646;
+    color:#464646;
     text-decoration: none;
     transition: .4s;
     font-size: 14px;
     font-weight: 500;
 }
-
-.menu-link:hover {
+.menu-link:hover{
     color: #3979D9;
 }
 
-.tehran {
+/*********************************main1********************************/
+
+.tehran{
     background-image: url(./image/tehran.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 611px;
+    height: 690px;
     margin-top: 84px;
 }
-
-.tehran h1 {
+.tehran h1{
     width: 25%;
-    font-size: 44px;
+    font-size: 44px ;
     margin-right: 280px;
     padding-top: 160px;
     color: #262626;
@@ -166,7 +164,7 @@ header .btn span {
     line-height: 48px;
 }
 
-.m1 {
+.m1{
     display: flex;
     align-items: center;
     margin-top: 20px;
@@ -175,22 +173,20 @@ header .btn span {
     margin-right: auto;
 }
 
-.m1-img {
+.m1-img{
     margin: 10px;
     width: 50%;
 }
 
-.m1-img img {
+.m1-img img{
     float: left;
     padding-left: 40px;
 }
-
-.m1-text {
+.m1-text{
     margin: 10px;
     width: 50%;
 }
-
-.m1-text h1 {
+.m1-text h1{
     margin-bottom: 20px;
     color: #000000;
     font-size: 32px;
@@ -198,17 +194,16 @@ header .btn span {
     font-family: peyda;
 }
 
-.m1-text p {
+.m1-text p{
     font-size: 16px;
     font-weight: 400;
-}
 
-.m1-btn {
+}
+.m1-btn{
     margin-top: 40px;
 }
-
-.m1-text .btn {
-    background-color: #3979D9;
+.m1-text .btn{
+    background-color:#3979D9;
     border-radius: 100px;
     transition: all ease .3s;
     height: 45px;
@@ -217,16 +212,13 @@ header .btn span {
     align-items: center;
     justify-content: center;
 }
-
-.m1-text .btn a {
+.m1-text .btn a{
     text-decoration: none;
     display: flex;
     color: white;
     padding-top: 5px;
 }
-
-
-/* ---------main2------ */
+/********************************main2*******************************/
 
 .main2 {
     width: 100%;
@@ -302,50 +294,149 @@ header .btn span {
 }
 
 .b-image1 {
-    background-image: url("/image/image-4.png");
+    background-image: url("./image/image-4.png");
 }
 
 .b-image2 {
-    background-image: url("/image/image-5.png");
+    background-image: url("./image/image-5.png");
     width: 357px;
     height: 357px;
 }
 
 .b-image3 {
-    background-image: url("/image/image-6.png");
+    background-image: url("./image/image-6.png");
     width: 357px;
     height: 357px;
 }
 
 
-/*******************footer*******************/
 
-.karzar {
+/*************************karzar********************/
+.karzar{
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 15px;
-    position: fixed;
-    z-index: 99;
+    position: sticky;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #222222;
+    z-index: 99;
+    background-color:#222222;
     height: 60px;
     color: #FFFFFF;
 }
-
-.karzar div {
+.karzar div{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.karzar a {
+.karzar a{
     margin-right: 20px;
     text-decoration: none;
     background-color: #FFFFFF;
     color: #1976D2;
     border-radius: 10px;
-    padding: 3px 15px;
+    padding: 3.5px 15px;
 }
+
+/*******************footer*******************/
+
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.f1{
+    padding-right: 10px;
+}
+
+.f1{
+    width: 25%;
+}
+
+
+.f2{
+    width: 25%;
+    padding-right: 20px;
+}
+.f2 li, .f1 li{
+    list-style: none;
+    padding: 6px 0px;
+    color: #404040;
+    font-size: 15px;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.f3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 300px;
+    padding-right: 10px;
+}
+.address{
+    color: #404040;
+}
+.f3-2{
+    margin-top: 25px;
+}
+.f3-3{
+    margin-top: 10px;
+}
+.telegram span, .mail span{
+   position: relative;
+   top: 3px;
+}
+footer h4{
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.f4{
+    background-color: #EFF1FA;
+    margin-right: 30px;
+    border-radius: 15px;
+    position:relative;
+    width: 260px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    padding-right: 10px;
+
+}
+.f4 img{
+    bottom: 65px;
+    position:absolute;
+    z-index: 134;
+}
+.f4 p{
+    font-family: 'peyda';
+    color: #4A529E;
+    max-width: 165px;
+    bottom: 8px;
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    line-height: 2;
+}
+
+.footer-p{
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.footer-p span{
+    color:  #0274be;
+}
+
