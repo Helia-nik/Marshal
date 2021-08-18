@@ -228,7 +228,7 @@ header .btn span {
 
 /* ---------main2------ */
 
-.main2 {
+.main2 , .main3 {        /* + main3*/
     width: 100%;
     background-color: #f8f9fd;
     display: flex;
@@ -316,8 +316,75 @@ header .btn span {
     width: 357px;
     height: 357px;
 }
-
-
+/* ---------main3------ */
+.grey-container{
+    width: 1092px;
+    height: 207.6px;
+    background-color: #404040;
+    border-radius: 17px;
+    margin-top: 110px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.grey-content{
+    width: 1002px;
+    height: 121.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right !important;
+}
+.g-search-section{
+    display: flex;
+    justify-content: space-between;
+    height: 68px;
+    align-items: center;
+}
+.grey-text h2{
+    font-family: peyda;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: bold;
+    
+}
+.search-box{
+    background-color: #FFFFFF;
+    width: 676px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius:  30px;
+    padding: 0 20px;
+}
+.search-box span{
+    text-align: center;
+    color: #BBBBBB;
+}
+.search-icon{
+    width: 17px;
+    color: #404040;
+}
+.icon-box{
+    width: 280px;
+    display: flex;
+    justify-content: space-around;
+}
+.icon-service{
+    width: 48px;
+    height: 48px;
+    transition: 0.3s;
+    background-color: #404040;
+    border-radius: 50%;
+}
+.icon-service:hover{
+    background-color: #0274be;
+    border-radius: 50%;
+}
 /*******************footer*******************/
 
 .karzar {
