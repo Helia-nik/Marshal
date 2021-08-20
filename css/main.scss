@@ -5,6 +5,28 @@ $lightGray:#f8f9fd;
 $theBlue:#3979D9;
 $darkGray:#404040;
 
+$desktop:1200px;
+$mediumDvice:1024px;
+$smallDvice:768px;
+
+@mixin smallDevice{
+    @media (max-width: #{$smallDvice}){
+        @content;
+    }
+}
+
+@mixin mediumDevice{
+    @media (max-width: #{$mediumDvice}){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (max-width: #{$desktop}){
+        @content;
+    }
+}
+
 
 
 
@@ -415,11 +437,26 @@ header{
     background-color:#222222;
     height: 60px;
     color: #FFFFFF;
+    @include smallDevice{
+        height: 55px;
+    }
     div{
         display: flex;
         align-items: center;
-        justify-content: center;
+        @include smallDevice{
+            width: 100%;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
+    p{
+        @include smallDevice{
+            font-size: 13px;
+            max-width: 60%;
+        }
+    }
+    
     a{
         margin-right: 20px;
         text-decoration: none;
@@ -427,6 +464,10 @@ header{
         color: $theBlue;
         border-radius: 10px;
         padding: 3.5px 15px;
+        @include smallDevice{
+            font-size: 13px;
+            padding:2.5px 7px;
+        }
     }
 }
 /*****************************************footer********************/

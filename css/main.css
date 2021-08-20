@@ -545,6 +545,12 @@ header .navbar .btn span {
   color: #FFFFFF;
 }
 
+@media (max-width: 768px) {
+  .karzar {
+    height: 55px;
+  }
+}
+
 .karzar div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -552,9 +558,24 @@ header .navbar .btn span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .karzar div {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .karzar p {
+    font-size: 13px;
+    max-width: 60%;
+  }
 }
 
 .karzar a {
@@ -564,6 +585,13 @@ header .navbar .btn span {
   color: #3979D9;
   border-radius: 10px;
   padding: 3.5px 15px;
+}
+
+@media (max-width: 768px) {
+  .karzar a {
+    font-size: 13px;
+    padding: 2.5px 7px;
+  }
 }
 
 /*****************************************footer********************/
