@@ -5,6 +5,28 @@ $lightGray:#f8f9fd;
 $theBlue:#3979D9;
 $darkGray:#404040;
 
+$desktop:1200px;
+$mediumDvice:1024px;
+$smallDvice:768px;
+
+@mixin smallDevice{
+    @media (max-width: #{$smallDvice}){
+        @content;
+    }
+}
+
+@mixin mediumDevice{
+    @media (max-width: #{$mediumDvice}){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (max-width: #{$desktop}){
+        @content;
+    }
+}
+
 
 
 
@@ -73,16 +95,13 @@ header{
                 background-color:$theBlue;
                 border-radius: 100px;
                 font-size: 14px;
-                padding: 8px 13px 10px 23px;
                 transition: all ease .3s;
-                height: 35px;
                 display: flex;
                 color: white;
                 align-items: center;
-            }
-            span{
-                padding-top: 5px;
-                margin-left: 7px;
+                padding-right: 10px;
+                height: 35px;
+                width: 120px;
             }
         }
 
@@ -102,6 +121,9 @@ header{
     background-size: cover;
     height: 690px;
     margin-top: 84px;
+    @include smallDevice{ 
+        background-image: url(../image/tehransmall.jpg);
+    }
     .tehran-text{
         width: 71.5%;
         margin-left: auto;
@@ -115,6 +137,12 @@ header{
         line-height: 48px;
         padding-top: 180px;
         padding-right: 70px;
+        @include smallDevice(){
+            font-size: 25px !important;
+            line-height: 46px;
+            padding: 65% 22% 0 0 !important;
+            
+        }
     }
 }
 
@@ -127,27 +155,54 @@ header{
     max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
+    @include smallDevice(){
+        flex-direction: column;
+    }
+    
     .m1-img{
         margin: 10px;
         width: 50%;
+        @include smallDevice(){
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
         img{
             float: left;
             padding-left: 40px;
+            @include smallDevice(){
+                padding: 0;
+                width: 62%;
+                padding-top: 40px;
+            }
+        
+        
         }
     }
     .m1-text{
         margin: 10px;
         width: 50%;
+        @include smallDevice {
+            width: 98%;
+            text-align: center;
+            
+        }
         h1{
             margin-bottom: 20px;
             color: #000000;
             font-size: 32px;
             font-weight: 800;
             font-family: peyda;
+            @include smallDevice(){
+                font-size: 28px;
+            }
         }
         p{
             font-size: 16px;
             font-weight: 400;
+            @include smallDevice(){
+                font-size: 14px;
+            }
         
         }
         .btn{
@@ -159,11 +214,19 @@ header{
             display: flex;
             align-items: center;
             justify-content: center;
+            @include smallDevice(){
+                margin-left: auto;
+                margin-right: auto;
+            }
             a{
                 text-decoration: none;
                 display: flex;
                 color: white;
                 padding-top: 5px;
+                p{
+                    font-size: 16px;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -413,13 +476,24 @@ header{
     bottom: 0;
     z-index: 99;
     background-color:#222222;
-    height: 60px;
+    padding:15px 10px;
     color: #FFFFFF;
+    
     div{
         display: flex;
         align-items: center;
-        justify-content: center;
+        @include smallDevice{
+            width: 100%;
+            justify-content: space-between;
+        }
     }
+    p{
+        @include smallDevice{
+            font-size: 13px;
+            max-width: 65%;
+        }
+    }
+    
     a{
         margin-right: 20px;
         text-decoration: none;
@@ -427,6 +501,10 @@ header{
         color: $theBlue;
         border-radius: 10px;
         padding: 3.5px 15px;
+        @include smallDevice{
+            font-size: 13px;
+            padding:2.5px 7px;
+        }
     }
 }
 /*****************************************footer********************/
