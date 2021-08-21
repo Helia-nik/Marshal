@@ -40,7 +40,10 @@ body{
     background-color: $lightGray;
     font-family: Vazir FD !important;
 }
-
+.jump:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
 //---------------------header---------------------------
 header{
     section{
@@ -63,7 +66,7 @@ header{
         display: flex;
         align-items: center;
         padding-top: 20px;
-        width: 71.5%;
+        width: 1010px;
         justify-content: space-between;
         height: 84px;
         .logo{
@@ -101,7 +104,13 @@ header{
                 align-items: center;
                 padding-right: 10px;
                 height: 35px;
-                width: 120px;
+                width: 130px;
+                p{
+                    padding-right: 5px;
+                }
+                svg{
+                    margin-top: 5px;
+                }
             }
         }
 
@@ -173,6 +182,7 @@ header{
             @include smallDevice(){
                 padding: 0;
                 width: 62%;
+                height: auto;
                 padding-top: 40px;
             }
         
@@ -209,8 +219,8 @@ header{
             background-color:$theBlue;
             border-radius: 100px;
             transition: all ease .3s;
-            height: 45px;
-            width: 150px;
+            height: 50px;
+            width: 170px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -515,27 +525,42 @@ header{
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+        @include smallDevice(){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            width: 100vw;
+            font-size: 12px;
+            margin-top: 30px;
+            padding-right: 10px;
+
+
+        }
     .f1{
         padding-right: 10px;
         width: 25%;
+        padding-right: 20px;
+        @include smallDevice(){
+            grid-area: 1 / 1 / 2 / 2;
+        }
         li{
             list-style: none;
             padding: 6px 0px;
             color: $darkGray;
-            font-size: 15px;
-            font-weight: 400;
         }
     }
     
     .f2{
         width: 25%;
         padding-right: 20px;
+        @include smallDevice(){
+            width: 50%;
+            grid-area: 1 / 2 / 2 / 3;
+        }
         li{
             list-style: none;
             padding: 6px 0px;
             color: $darkGray;
-            font-size: 15px;
-            font-weight: 400;
         }
     }
     .f3{
@@ -544,14 +569,42 @@ header{
         align-items: flex-start;
         max-width: 300px;
         padding-right: 10px;
+        @include smallDevice(){
+            grid-area: 2 / 1 / 3 / 3;
+            flex-direction: column-reverse;
+            margin-top: 20px;
+        }
         .address{
             color: #404040;
+            @include smallDevice(){
+                width: 100vw;
+                margin-top: 10px;
+                font-size: 10px;
+            }
+        }
+        .f3-links{
+            @include smallDevice(){
+                display: flex;
+                align-items: center;
+                width: 98vw;
+                justify-content: space-around;
+            }
         }
         .f3-2{
             margin-top: 25px;
+            @include smallDevice(){
+                width: 50%;
+                margin:0;
+                padding: 0;
+            }
         }
         .f3-3{
             margin-top: 10px;
+            @include smallDevice(){
+                width: 50%;
+                margin:0;
+                padding: 0;
+            }
         }
         .telegram , .mail {
             span{
@@ -572,10 +625,24 @@ header{
         justify-content: center;
         margin-right: 10px;
         padding-right: 10px;
+        @include smallDevice(){
+            width: 100%;
+            grid-area: 3 / 1 / 4 / 3;
+            height: 180px;
+            flex-direction: column;
+            margin-top: 30px;
+            margin-right: 0;
+            width: 94%;
+        }
         img{
             bottom: 65px;
             position:absolute;
             z-index: 134;
+            @include smallDevice(){
+                left: 0;
+                height: 80%;
+                bottom: auto;
+            }
         }
         p{
             font-family: 'peyda';
@@ -586,6 +653,11 @@ header{
             font-size: 18px;
             text-align: center;
             line-height: 2;
+            @include smallDevice(){
+                bottom: auto;
+                left: 160px;
+                font-weight: 900;
+            }
         }
     
     }
@@ -598,6 +670,11 @@ header{
         font-size: 15px;
         font-weight: 500;
     }
+
+    li:hover{
+        color: #000;
+        cursor: pointer;
+    }
     
 }
 .footer-p{
@@ -609,8 +686,14 @@ header{
     span{
         color: $theBlue;
     }
+    @include smallDevice(){
+        font-size: 8px;
+    }
+    span:hover{
+        color:$darkGray;
+        cursor: pointer;
+    }
 }
-
 
 
 
