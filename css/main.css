@@ -51,11 +51,22 @@ header .navbar {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 84px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  header .navbar {
+    width: 90%;
+  }
 }
 
 header .navbar .logo {
   width: 115px;
   padding-bottom: 20px;
+}
+
+header .navbar .active {
+  right: -5vw !important;
 }
 
 header .navbar .menu {
@@ -72,6 +83,55 @@ header .navbar .menu {
   margin-bottom: 20px;
 }
 
+header .navbar .menu .close {
+  display: none;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  header .navbar .menu .close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    color: #FFFFFF !important;
+    height: 25px;
+  }
+}
+
+header .navbar .menu .close:hover {
+  cursor: pointer;
+  background-color: #404040;
+}
+
+@media (max-width: 768px) {
+  header .navbar .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    right: -105vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #3979D9;
+    padding: 0;
+    margin: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    top: 0;
+    -webkit-transition: all ease 1s;
+    transition: all ease 1s;
+    width: 100vw;
+    padding-top: 80px;
+    z-index: 2;
+  }
+}
+
 header .navbar .menu .menu-link {
   padding: 13px 15px;
   color: #404040;
@@ -82,12 +142,26 @@ header .navbar .menu .menu-link {
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+  header .navbar .menu .menu-link {
+    padding: 17px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
 header .navbar .menu .menu-link:hover {
   color: #3979D9;
 }
 
+@media (max-width: 768px) {
+  header .navbar .menu .menu-link:hover {
+    color: #404040;
+  }
+}
+
 header .navbar .btn {
-  margin-bottom: 20px;
   -webkit-transition: all ease .3s;
   transition: all ease .3s;
 }
@@ -110,12 +184,71 @@ header .navbar .btn .download {
   width: 130px;
 }
 
+header .navbar .btn .download svg {
+  margin-top: 5px;
+}
+
+header .navbar .btn .download .svg2 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header .navbar .btn .download .svg2 {
+    display: block !important;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .navbar .btn .download {
+    background-color: #FFFFFF;
+    color: #3979D9;
+    width: 150px;
+    height: 45px;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  header .navbar .btn .download .svg1 {
+    display: none;
+  }
+}
+
 header .navbar .btn .download p {
-  padding-right: 5px;
+  padding-right: 15px;
 }
 
 header .navbar .btn .download svg {
   margin-top: 5px;
+}
+
+header .navbar .btn .download .svg2 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header .navbar .btn {
+    padding-top: 50px;
+  }
+}
+
+header .navbar .burger {
+  padding-bottom: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header .navbar .burger {
+    display: block;
+  }
+}
+
+header .navbar .burger div {
+  width: 25px;
+  height: 4px;
+  margin: 5px;
+  border-radius: 1px;
+  background-color: #404040;
 }
 
 .tehran {
