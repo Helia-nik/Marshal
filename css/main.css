@@ -275,11 +275,15 @@ header .navbar .btn .download {
   margin-top: 40px;
 }
 
-.main2, .main3 {
-  /* + main3*/
+.main2 {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -295,16 +299,27 @@ header .navbar .btn .download {
 
 .main2 .blue-container {
   background-color: #3979D9;
-  border-radius: 30px;
+  border-radius: 20px;
   width: 1140px;
   height: 1171.45px;
   margin-top: 70px;
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .main2 .blue-container {
+    max-width: 100%;
+    height: 2700px;
+    margin-top: 150px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .main2 .b-content {
   width: 100%;
-  height: 1171.45px;
+  height: 200vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,6 +331,18 @@ header .navbar .btn .download {
   top: -55px;
 }
 
+@media (max-width: 768px) {
+  .main2 .b-content {
+    height: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .main2 .b-content .b-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,10 +352,37 @@ header .navbar .btn .download {
       justify-content: space-around;
 }
 
+@media (max-width: 768px) {
+  .main2 .b-content .b-section {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .main2 .b-content .b-images {
   width: 357px;
   height: 357px;
+  border-radius: 30px;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .main2 .b-content .b-images {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90vw;
+    height: 90vw;
+    margin: 20px;
+  }
 }
 
 .main2 .b-content .b-images h2 {
@@ -359,6 +413,12 @@ header .navbar .btn .download {
   text-align: right;
 }
 
+@media (max-width: 768px) {
+  .main2 .b-content .b-text {
+    margin: 30px 0 10px;
+  }
+}
+
 .main2 .b-content .b-text h2 {
   font-family: peyda;
   color: #FFFFFF;
@@ -375,31 +435,38 @@ header .navbar .btn .download {
   background-image: url("../image/image-4.png");
 }
 
+@media (max-width: 768px) {
+  .main2 .b-content .b-image1 {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
 .main2 .b-content .b-image2 {
   background-image: url("../image/image-5.png");
-  width: 357px;
-  height: 357px;
 }
 
 .main2 .b-content .b-image3 {
   background-image: url("../image/image-6.png");
-  width: 357px;
-  height: 357px;
 }
 
-.main3 {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media (max-width: 768px) {
+  .main2 .b-content .b-image3 {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
 }
 
 .grey-container {
   width: 1092px;
+  position: relative;
+  max-width: 1092px;
   height: 207.6px;
   background-color: #404040;
   border-radius: 17px;
-  margin-top: 110px;
+  margin: 110px auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,8 +479,15 @@ header .navbar .btn .download {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .grey-container {
+    max-width: 100%;
+    margin: 110px  auto 0;
+  }
+}
+
 .grey-content {
-  width: 1002px;
+  width: 100%;
   height: 121.6px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -426,6 +500,7 @@ header .navbar .btn .download {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: right !important;
+  padding: 0 50px;
 }
 
 .grey-content .g-search-section {
@@ -439,6 +514,18 @@ header .navbar .btn .download {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .grey-content .g-search-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 15px 20px;
+    height: 140px;
+  }
 }
 
 .grey-content .grey-text h2 {
@@ -446,7 +533,7 @@ header .navbar .btn .download {
   color: #FFFFFF;
   font-size: 26px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .grey-content .search-box {
@@ -467,9 +554,21 @@ header .navbar .btn .download {
   padding: 0 20px;
 }
 
+@media (max-width: 768px) {
+  .grey-content .search-box {
+    max-width: 95%;
+  }
+}
+
 .grey-content .search-box span {
   text-align: center;
   color: #BBBBBB;
+}
+
+@media (max-width: 768px) {
+  .grey-content .search-box span {
+    padding: 8px 0;
+  }
 }
 
 .grey-content .search-box .search-icon {
@@ -478,12 +577,19 @@ header .navbar .btn .download {
 }
 
 .grey-content .icon-box {
-  width: 280px;
+  width: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .grey-content .icon-box {
+    width: 100%;
+    margin: 20px 10px;
+  }
 }
 
 .grey-content .icon-box .icon-service {
@@ -501,7 +607,7 @@ header .navbar .btn .download {
 }
 
 .pic-container {
-  width: 1140px;
+  max-width: 100%;
   height: 178px;
   margin: 80px 0 150px 0;
   display: -webkit-box;
@@ -513,6 +619,22 @@ header .navbar .btn .download {
   border-radius: 17px;
 }
 
+@media (max-width: 768px) {
+  .pic-container {
+    max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .pic-container .txt-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -521,6 +643,14 @@ header .navbar .btn .download {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 8vw;
+}
+
+@media (max-width: 768px) {
+  .pic-container .txt-btn {
+    max-width: 100%;
+    padding-left: 10vw;
+  }
 }
 
 .pic-container .txt-btn h2 {
@@ -552,6 +682,8 @@ header .navbar .btn .download {
   color: #000000;
   background-color: #FFFFFF;
   border-style: solid;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
 }
 
 .pic-container .txt-btn .btn-arrow {
@@ -576,8 +708,14 @@ header .navbar .btn .download {
 }
 
 .methods {
-  width: 586px;
+  width: 50%;
   height: 178px;
+}
+
+@media (max-width: 768px) {
+  .methods {
+    max-width: 100%;
+  }
 }
 
 .methods .hands {
@@ -586,13 +724,19 @@ header .navbar .btn .download {
 }
 
 .developers {
-  width: 448px;
+  width: 48%;
   height: 178px;
 }
 
 .developers .box {
   width: 133px;
   height: 135px;
+}
+
+@media (max-width: 768px) {
+  .developers .box {
+    max-width: 100%;
+  }
 }
 
 .karzar {

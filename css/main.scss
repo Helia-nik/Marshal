@@ -6,7 +6,7 @@ $theBlue:#3979D9;
 $darkGray:#404040;
 
 $desktop:1200px;
-$mediumDvice:1024px;
+$mediumDvice:1102px;
 $smallDvice:768px;
 
 @mixin smallDevice{
@@ -237,12 +237,13 @@ header{
 
 
 ////////////////////////main2
-.main2 , .main3 {        /* + main3*/
+.main2 {   
+    width: 100%;     
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 .main2{
     h2 {
         font-family: peyda;
@@ -250,29 +251,61 @@ header{
     }
     .blue-container {
         background-color: $theBlue;
-        border-radius: 30px;
+        border-radius: 20px;
         width: 1140px;
         height: 1171.45px;
         margin-top: 70px;
         position: relative;
+
+        @include smallDevice(){
+            max-width: 100%;
+            height: 2700px;
+            margin-top: 150px;
+            align-items: center;
+        }
     }
     .b-content {
         width: 100%;
-        height: 1171.45px;
+        // height: 1171.45px;
+        height: 200vh;
         display: flex;
         flex-direction: column;
         position: absolute;
         top: -55px;
+
+        @include smallDevice(){
+            height: auto;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
         .b-section {
             display: flex;
             margin-bottom: 50px;
             justify-content: space-around;
+
+            @include smallDevice(){ //changed by zahra
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
         
         .b-images {
             width: 357px;
             height: 357px;
+            border-radius: 30px;  //changed by zahra
             position: relative;
+
+            @include smallDevice(){
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 90vw;
+                height:90vw;///////////
+                margin:20px;
+        
+            }
             h2 {
                 color: #000000;
                 font-size: 22px;
@@ -291,6 +324,9 @@ header{
             justify-content: center;
             align-items: center;
             text-align: right;
+            @include smallDevice(){
+                margin: 30px 0 10px ;
+            }
             h2 {
                 font-family: peyda;
                 color: #FFFFFF;
@@ -300,57 +336,70 @@ header{
             }
             p {
                 color: $lightGray;
+                
             }
             
         }
         .b-image1 {
             background-image: url("../image/image-4.png");
+            @include smallDevice(){
+                order: -1;
+            }
         }
         
         .b-image2 {
             background-image: url("../image/image-5.png");
-            width: 357px;
-            height: 357px;
         }
         
         .b-image3 {
             background-image: url("../image/image-6.png");
-            width: 357px;
-            height: 357px;
+            @include smallDevice(){
+                order: -1;
+            }
         }
         
     }
 }
 
-/////////////////////main3
-
-.main3{
-    flex-direction: column;
-}
+//////grey
 .grey-container{
     width: 1092px;
+    position: relative;
+    max-width: 1092px;//changed by zahra
     height: 207.6px;
     background-color: $darkGray;
     border-radius: 17px;
-    margin-top: 110px;
+    margin: 110px auto 0  ;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    @include smallDevice(){
+        max-width: 100%;
+        margin: 110px  auto 0;
+    }
+    
 }
 .grey-content{
-    width: 1002px;
+    width: 100%;
     height: 121.6px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: right !important;
+    padding: 0 50px;/////////
 
     .g-search-section{
         display: flex;
         justify-content: space-between;
         height: 68px;
         align-items: center;
+        margin-top: 5px;
+        @include smallDevice(){
+            flex-direction: column;
+            padding :15px 20px;
+            height: 140px;
+        }
     }
     .grey-text{
         h2{
@@ -358,7 +407,7 @@ header{
             color: #FFFFFF;
             font-size: 26px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 2px; //////
             
         }
     }
@@ -372,9 +421,17 @@ header{
         border: 1px solid grey;
         border-radius:  30px;
         padding: 0 20px;
+        // margin: 2px 3% ; /////////
+        @include smallDevice(){
+            max-width: 95%;
+        }
         span{
             text-align: center;
             color: #BBBBBB;
+            @include smallDevice(){
+                padding: 8px 0;
+
+            }
         }
         .search-icon{
             width: 17px;
@@ -382,9 +439,15 @@ header{
         }
     }
     .icon-box{
-        width: 280px;
+        // margin: 2px 3% ;
+        width: 260px;
         display: flex;
         justify-content: space-around;
+
+        @include smallDevice(){
+            width: 100%;
+            margin: 20px 10px;
+        }
         .icon-service{
             width: 48px;
             height: 48px;
@@ -398,17 +461,32 @@ header{
         }
     }
 }
-////////////////////pic section
+///////////pic section
 .pic-container{
-    width: 1140px;
+    // width: 1140px;
+    max-width: 100%; // changed by zahra
     height: 178px;
     margin: 80px 0 150px 0;
     display: flex;
     justify-content: space-between;
     border-radius: 17px;
+
+
+    @include smallDevice(){
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .txt-btn {
         display: flex;
         flex-direction: column;
+        padding-left:8vw;
+
+        @include smallDevice(){
+            max-width: 100%;
+            padding-left:10vw;
+        }
     
         h2{
             font-family: peyda;
@@ -432,6 +510,7 @@ header{
             color: #000000;
             background-color: #FFFFFF;
             border-style: solid;
+            transition: all ease .3s;
         }
         .btn-arrow{
             color: #4E7FEA;
@@ -447,22 +526,33 @@ header{
     justify-content: space-between;
     background-color: #f2f4fb;
     border-radius: 16px;
+    // padding: 0 130px;
     
 }
 .methods{
-    width: 586px;
+    // width: 586px;
+    width: 50%; //changed by zahra
     height: 178px;
+
+    @include smallDevice(){
+        max-width: 100%;
+    }
     .hands{
         width: 123px;
         height: 134px;
     }
 }
 .developers{
-    width: 448px;
+    // width: 448px;
+    width: 48%;
     height: 178px;
     .box{
         width: 133px;
         height: 135px;
+
+        @include smallDevice(){
+            max-width: 100%;
+        }
     }
 }
 
