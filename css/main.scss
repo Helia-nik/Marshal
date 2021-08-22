@@ -6,8 +6,30 @@ $theBlue:#3979D9;
 $darkGray:#404040;
 
 $desktop:1200px;
-$mediumDvice:1102px;
+$mediumDvice:1140px;
 $smallDvice:768px;
+$tinyDevice:580px;
+$verySmallDevice:496px;
+$veryTinyDevice:379px;
+
+
+@mixin veryTinyDivice {
+    @media (max-width:#{$veryTinyDevice}){
+        @content;
+    }
+}
+
+@mixin verySmallDevice{
+    @media (max-width: #{$verySmallDevice}){
+        @content;
+    }
+}
+
+@mixin tinyDevice {
+    @media (max-width: #{$tinyDevice}){
+        @content;
+    }  
+}
 
 @mixin smallDevice{
     @media (max-width: #{$smallDvice}){
@@ -39,6 +61,7 @@ body{
     direction: rtl;
     background-color: $lightGray;
     font-family: Vazir FD !important;
+    min-width: 310px;
 }
 .jump:hover{
     transform: translateY(-5px);
@@ -248,8 +271,11 @@ header{
 
 ////////////////////////main2
 .main2 {   
-    width: 100%;     
+    max-width: 100%;   
+    height: auto;  
     display: flex;
+    margin-right: auto;
+    margin-left: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -267,9 +293,33 @@ header{
         margin-top: 70px;
         position: relative;
 
+        @include mediumDevice(){
+            max-width: 100%;
+        }
         @include smallDevice(){
             max-width: 100%;
-            height: 2700px;
+            // height: 2900px;
+            height:400vw;
+            margin-top: 150px;
+            align-items: center;
+        }
+        @include tinyDevice(){
+            max-width: 100%;
+            height:425vw ;
+            margin-top: 150px;
+            align-items: center;
+
+        }
+        @include verySmallDevice(){
+            max-width: 100%;
+            height:460vw ;
+            margin-top: 150px;
+            align-items: center;
+        }
+
+        @include veryTinyDivice(){
+            max-width: 100%;
+            height:550vw ;
             margin-top: 150px;
             align-items: center;
         }
@@ -311,8 +361,8 @@ header{
             @include smallDevice(){
                 background-size: cover;
                 background-repeat: no-repeat;
-                width: 90vw;
-                height:90vw;///////////
+                width: 95vw;
+                height:95vw;///////////
                 margin:20px;
         
             }
@@ -336,6 +386,7 @@ header{
             text-align: right;
             @include smallDevice(){
                 margin: 30px 0 10px ;
+                width: 95%;
             }
             h2 {
                 font-family: peyda;
@@ -386,9 +437,11 @@ header{
     cursor: pointer;
     @include smallDevice(){
         max-width: 100%;
-        margin: 110px  auto 0;
+        margin: 110px  auto 50px;
     }
-    
+    @include mediumDevice(){
+        max-width: 97%;
+    }
 }
 .grey-content{
     width: 100%;
@@ -418,7 +471,10 @@ header{
             font-size: 26px;
             font-weight: bold;
             margin-bottom: 2px; //////
-            
+            @include smallDevice(){
+                font-size: 16px;
+                text-align: center;
+            }
         }
     }
     .search-box{
@@ -431,15 +487,16 @@ header{
         border: 1px solid grey;
         border-radius:  30px;
         padding: 0 20px;
-        // margin: 2px 3% ; /////////
+        margin: 2px 0 2px 5%; 
         @include smallDevice(){
-            max-width: 95%;
+            max-width: 81%;
         }
         span{
             text-align: center;
             color: #BBBBBB;
             @include smallDevice(){
                 padding: 8px 0;
+                overflow: hidden;
 
             }
         }
@@ -464,6 +521,10 @@ header{
             transition: 0.3s;
             background-color: $darkGray;
             border-radius: 50%;
+            @include smallDevice(){
+                width: 38px;
+                height: 38px;
+            }
         }
         .icon-service:hover{
             background-color: $theBlue;
@@ -473,8 +534,8 @@ header{
 }
 ///////////pic section
 .pic-container{
-    // width: 1140px;
-    max-width: 100%; // changed by zahra
+    width: 1140px;
+    max-width: 1140px;
     height: 178px;
     margin: 80px 0 150px 0;
     display: flex;
@@ -487,6 +548,9 @@ header{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    @include mediumDevice(){
+        max-width: 100%;
     }
     .txt-btn {
         display: flex;
@@ -504,6 +568,10 @@ header{
             font-size: 26px;
             font-weight: bold;
             margin-bottom: 20px;
+            
+            @include smallDevice(){
+                font-size: 18px;
+            }
         }
         div{
             display: flex;
@@ -545,7 +613,8 @@ header{
     height: 178px;
 
     @include smallDevice(){
-        max-width: 100%;
+        width: 100%;
+        margin-bottom: 20px;
     }
     .hands{
         width: 123px;
@@ -556,13 +625,14 @@ header{
     // width: 448px;
     width: 48%;
     height: 178px;
+    @include smallDevice(){
+        width: 100%;
+    }
     .box{
         width: 133px;
         height: 135px;
 
-        @include smallDevice(){
-            max-width: 100%;
-        }
+        
     }
 }
 

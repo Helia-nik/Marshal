@@ -9,6 +9,7 @@ body {
   direction: rtl;
   background-color: #f8f9fd;
   font-family: Vazir FD !important;
+  min-width: 310px;
 }
 
 .jump:hover {
@@ -291,10 +292,13 @@ header .navbar .btn .download svg {
 }
 
 .main2 {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: auto;
+  margin-left: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -321,10 +325,49 @@ header .navbar .btn .download svg {
   position: relative;
 }
 
+@media (max-width: 1140px) {
+  .main2 .blue-container {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .main2 .blue-container {
     max-width: 100%;
-    height: 2700px;
+    height: 400vw;
+    margin-top: 150px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .main2 .blue-container {
+    max-width: 100%;
+    height: 425vw;
+    margin-top: 150px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 496px) {
+  .main2 .blue-container {
+    max-width: 100%;
+    height: 460vw;
+    margin-top: 150px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 379px) {
+  .main2 .blue-container {
+    max-width: 100%;
+    height: 550vw;
     margin-top: 150px;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -394,8 +437,8 @@ header .navbar .btn .download svg {
   .main2 .b-content .b-images {
     background-size: cover;
     background-repeat: no-repeat;
-    width: 90vw;
-    height: 90vw;
+    width: 95vw;
+    height: 95vw;
     margin: 20px;
   }
 }
@@ -431,6 +474,7 @@ header .navbar .btn .download svg {
 @media (max-width: 768px) {
   .main2 .b-content .b-text {
     margin: 30px 0 10px;
+    width: 95%;
   }
 }
 
@@ -497,7 +541,13 @@ header .navbar .btn .download svg {
 @media (max-width: 768px) {
   .grey-container {
     max-width: 100%;
-    margin: 110px  auto 0;
+    margin: 110px  auto 50px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .grey-container {
+    max-width: 97%;
   }
 }
 
@@ -551,6 +601,13 @@ header .navbar .btn .download svg {
   margin-bottom: 2px;
 }
 
+@media (max-width: 768px) {
+  .grey-content .grey-text h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
 .grey-content .search-box {
   background-color: #FFFFFF;
   width: 676px;
@@ -567,11 +624,12 @@ header .navbar .btn .download svg {
   border: 1px solid grey;
   border-radius: 30px;
   padding: 0 20px;
+  margin: 2px 0 2px 5%;
 }
 
 @media (max-width: 768px) {
   .grey-content .search-box {
-    max-width: 95%;
+    max-width: 81%;
   }
 }
 
@@ -583,6 +641,7 @@ header .navbar .btn .download svg {
 @media (max-width: 768px) {
   .grey-content .search-box span {
     padding: 8px 0;
+    overflow: hidden;
   }
 }
 
@@ -616,13 +675,21 @@ header .navbar .btn .download svg {
   border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+  .grey-content .icon-box .icon-service {
+    width: 38px;
+    height: 38px;
+  }
+}
+
 .grey-content .icon-box .icon-service:hover {
   background-color: #3979D9;
   border-radius: 50%;
 }
 
 .pic-container {
-  max-width: 100%;
+  width: 1140px;
+  max-width: 1140px;
   height: 178px;
   margin: 80px 0 150px 0;
   display: -webkit-box;
@@ -650,6 +717,12 @@ header .navbar .btn .download svg {
   }
 }
 
+@media (max-width: 1140px) {
+  .pic-container {
+    max-width: 100%;
+  }
+}
+
 .pic-container .txt-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -674,6 +747,12 @@ header .navbar .btn .download svg {
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .pic-container .txt-btn h2 {
+    font-size: 18px;
+  }
 }
 
 .pic-container .txt-btn div {
@@ -729,7 +808,8 @@ header .navbar .btn .download svg {
 
 @media (max-width: 768px) {
   .methods {
-    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
@@ -743,15 +823,15 @@ header .navbar .btn .download svg {
   height: 178px;
 }
 
+@media (max-width: 768px) {
+  .developers {
+    width: 100%;
+  }
+}
+
 .developers .box {
   width: 133px;
   height: 135px;
-}
-
-@media (max-width: 768px) {
-  .developers .box {
-    max-width: 100%;
-  }
 }
 
 .karzar {
