@@ -72,6 +72,8 @@ body{
     transform: translateY(-5px);
     cursor: pointer;
 }
+
+
 //---------------------header---------------------------
 header{
     section{
@@ -97,9 +99,17 @@ header{
         width: 1010px;
         justify-content: space-between;
         height: 84px;
+        position: relative;
+        @include smallDevice(){
+            width: 90%;
+        }
         .logo{
             width:115px;
             padding-bottom: 20px;
+        }
+        .active{
+            right: -5vw !important;
+            
         }
         .menu{
             display: flex;
@@ -107,6 +117,45 @@ header{
             justify-content: flex-end;
             width: 72%;
             margin-bottom: 20px;
+            .close{
+                display: none;
+                overflow: hidden;
+                @include smallDevice(){
+                    display: block;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    padding: 5px;
+                    color: #FFFFFF !important;
+                    height: 25px;
+                    
+                }
+            }
+            .close:hover{
+                cursor: pointer;
+                background-color: $darkGray;
+            }
+            @include smallDevice(){
+                flex-direction: column;
+                right: -105vw;
+                height: 100vh;
+                position:absolute ;
+                background-color: $theBlue;
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                justify-content: flex-start;
+                top: 0;
+                transition: all ease 1s;
+                width: 100vw;
+                padding-top: 80px;
+                z-index: 2;
+                
+            }
+            
+
+        
+
             .menu-link{
                 padding: 13px 15px;
                 color:$darkGray;
@@ -114,14 +163,25 @@ header{
                 transition: .4s;
                 font-size: 14px;
                 font-weight: 500;
+                @include smallDevice(){
+                    padding: 17px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #fff;
+                    
+                }
+
             }
             .menu-link:hover{
                 color:$theBlue;
+                @include smallDevice(){
+                    color: $darkGray;
+                }
             }
         }
         .btn{
-            margin-bottom: 20px;
             transition: all ease .3s;
+
             .download{
                 background-color:$theBlue;
                 border-radius: 100px;
@@ -133,18 +193,65 @@ header{
                 padding-right: 10px;
                 height: 35px;
                 width: 130px;
+                svg{
+                    margin-top: 5px;
+                }
+                .svg2{
+                    display: none;
+                    @include smallDevice(){
+                        display: block !important;
+                        margin: 5px;
+                    }
+                }
+                @include smallDevice(){
+                    background-color: #FFFFFF;
+                    color: $theBlue;
+                    width: 150px;
+                    height: 45px;
+                    font-size: 17px;
+                    font-weight: 700;
+                    .svg1{
+                        display: none;
+                    }
+                }
                 p{
-                    padding-right: 5px;
+                    padding-right: 15px;
                 }
                 svg{
                     margin-top: 5px;
                 }
+                .svg2{
+                    display: none;
+                }
+            }
+            @include smallDevice(){
+                padding-top: 50px;
             }
         }
 
-    
+        .burger {
+            padding-bottom: 20px;
+            cursor: pointer;
+            display: none;
+            @include smallDevice(){
+                display: block;
+
+                
+            }
+            div{
+                width: 25px;
+                height: 4px;
+                margin: 5px;
+                border-radius: 1px;
+                background-color: $darkGray;
+
+            }
+
+        }
     }
+    
 }
+
 
 //---------------------------------main------------------------------------------------
 
