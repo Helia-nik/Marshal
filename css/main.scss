@@ -196,6 +196,9 @@ header{
                 svg{
                     margin-top: 5px;
                 }
+                .svg1{
+                    margin-bottom: 5px;
+                }
                 .svg2{
                     display: none;
                     @include smallDevice(){
@@ -215,7 +218,7 @@ header{
                     }
                 }
                 p{
-                    padding-right: 15px;
+                    padding-right: 10px;
                 }
                 svg{
                     margin-top: 5px;

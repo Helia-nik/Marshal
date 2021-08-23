@@ -190,6 +190,10 @@ header .navbar .btn .download svg {
   margin-top: 5px;
 }
 
+header .navbar .btn .download .svg1 {
+  margin-bottom: 5px;
+}
+
 header .navbar .btn .download .svg2 {
   display: none;
 }
@@ -216,7 +220,7 @@ header .navbar .btn .download .svg2 {
 }
 
 header .navbar .btn .download p {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 header .navbar .btn .download svg {
