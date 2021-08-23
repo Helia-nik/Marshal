@@ -8,28 +8,30 @@ $darkGray:#404040;
 $desktop:1200px;
 $mediumDvice:1140px;
 $smallDvice:768px;
-$tinyDevice:580px;
-$verySmallDevice:496px;
-$veryTinyDevice:379px;
 
 
-@mixin veryTinyDivice {
-    @media (max-width:#{$veryTinyDevice}){
-        @content;
-    }
-}
+// $tinyDevice:646px;
+// $verySmallDevice:535px;
+// $veryTinyDevice:379px;
 
-@mixin verySmallDevice{
-    @media (max-width: #{$verySmallDevice}){
-        @content;
-    }
-}
 
-@mixin tinyDevice {
-    @media (max-width: #{$tinyDevice}){
-        @content;
-    }  
-}
+// @mixin veryTinyDivice {
+//     @media (max-width:#{$veryTinyDevice}){
+//         @content;
+//     }
+// }
+
+// @mixin verySmallDevice{
+//     @media (max-width: #{$verySmallDevice}){
+//         @content;
+//     }
+// }
+
+// @mixin tinyDevice {
+//     @media (max-width: #{$tinyDevice}){
+//         @content;
+//     }  
+// }
 
 @mixin smallDevice{
     @media (max-width: #{$smallDvice}){
@@ -58,10 +60,13 @@ $veryTinyDevice:379px;
     padding: 0;
 }
 body{
+    // width: 100vw;
     direction: rtl;
     background-color: $lightGray;
     font-family: Vazir FD !important;
-    min-width: 310px;
+    min-width: 320px !important;
+    overflow-x: hidden;
+    
 }
 .jump:hover{
     transform: translateY(-5px);
@@ -271,7 +276,7 @@ header{
 
 ////////////////////////main2
 .main2 {   
-    max-width: 100%;   
+    width: 100vw;
     height: auto;  
     display: flex;
     margin-right: auto;
@@ -279,93 +284,74 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.main2{
     h2 {
         font-family: peyda;
         font-weight: 900;
     }
     .blue-container {
+        max-width: 1140px;
         background-color: $theBlue;
         border-radius: 20px;
-        width: 1140px;
-        height: 1171.45px;
-        margin-top: 70px;
+        padding:0 90px;
         position: relative;
-
-        @include mediumDevice(){
-            max-width: 100%;
-        }
+        height: auto;
+        // width: 100%;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr) ;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 50px 2vw;
+        grid-template-areas:
+        "pic1 text1"
+        "text2 pic2"
+        "pic3 text3";
+ 
         @include smallDevice(){
-            max-width: 100%;
-            // height: 2900px;
-            height:400vw;
-            margin-top: 150px;
-            align-items: center;
+            margin-top:150px;
+            padding: 0;
+            grid-template-columns: 1fr ;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-areas:
+            "pic1"
+            "text1"
+            "pic2"
+            "text2"
+            "pic3"
+            "text3";
         }
-        @include tinyDevice(){
-            max-width: 100%;
-            height:425vw ;
-            margin-top: 150px;
-            align-items: center;
-
-        }
-        @include verySmallDevice(){
-            max-width: 100%;
-            height:460vw ;
-            margin-top: 150px;
-            align-items: center;
-        }
-
-        @include veryTinyDivice(){
-            max-width: 100%;
-            height:550vw ;
-            margin-top: 150px;
-            align-items: center;
-        }
-    }
-    .b-content {
-        width: 100%;
-        // height: 1171.45px;
-        height: 200vh;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: -55px;
-
-        @include smallDevice(){
+        .b-item{
+            // width: 357px;
+            // height: 357px;
+            width: 80%;
             height: auto;
-            justify-content: space-between;
-            align-items: center;
-            
-        }
-        .b-section {
             display: flex;
-            margin-bottom: 50px;
-            justify-content: space-around;
-
-            @include smallDevice(){ //changed by zahra
-                width: 100%;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-        
-        .b-images {
-            width: 357px;
-            height: 357px;
-            border-radius: 30px;  //changed by zahra
-            position: relative;
+            justify-content: center;
+            align-items: center;
+            margin: -90px auto 100px;     
 
             @include smallDevice(){
-                background-size: cover;
-                background-repeat: no-repeat;
-                width: 95vw;
-                height:95vw;///////////
-                margin:20px;
-        
+                margin-bottom: 0;
             }
+        }
+    }
+       
+    .b-images {
+        width: 357px !important;
+        height: 357px !important;
+        border-radius: 30px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include smallDevice(){
+            width: 90vw !important;
+            height: 90vw !important;
+            margin:-100px auto 0;
+        }
+
+
             h2 {
                 color: #000000;
                 font-size: 22px;
@@ -374,19 +360,26 @@ header{
                 position: absolute;
                 bottom: 20px;
                 right: 20px;
-            }
-            
-        }
+
+                @include smallDevice(){
+                    position: absolute;
+                    bottom: 20px;
+                    right: auto;
+                    left: auto;
+                }
+                }
+                
+        }                  
         .b-text {
-            width: 400px;
+            // width: 400px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: right;
+            text-align: right !important;
+
             @include smallDevice(){
-                margin: 30px 0 10px ;
-                width: 95%;
+                font-size: 15px !important;
             }
             h2 {
                 font-family: peyda;
@@ -394,39 +387,72 @@ header{
                 font-size: 22px;
                 font-weight: 800;
                 margin-bottom: 15px;
+                text-align: center !important;
             }
             p {
                 color: $lightGray;
-                
+                @include smallDevice(){
+                    text-align: center;
+                    font-size: 15px !important;
+                } 
             }
             
         }
+        .b-text1{
+            grid-area:"text1";
+            @include smallDevice(){
+                grid-area: "text1";
+                order: 1;
+            }
+        }
+        .b-text2{
+            grid-area: "text2";
+            @include smallDevice(){
+                grid-area: "text2";
+                order: 3;
+            }
+        }
+        .b-text3{
+            grid-area: "text3";
+            @include smallDevice(){
+                grid-area: "text3";
+                order: 5;
+            }
+        }
         .b-image1 {
             background-image: url("../image/image-4.png");
+            grid-area: "pic1"; 
             @include smallDevice(){
-                order: -1;
+                order: 0;
+                grid-area: "pic1";
             }
         }
         
         .b-image2 {
             background-image: url("../image/image-5.png");
-        }
-        
-        .b-image3 {
-            background-image: url("../image/image-6.png");
+            grid-area: "pic2"; 
             @include smallDevice(){
-                order: -1;
+                grid-area: "pic2";
+                order: 2;
             }
         }
-        
-    }
+        .b-image3 {
+            background-image: url("../image/image-6.png");
+            grid-area: "pic3"; 
+            @include smallDevice(){
+                order: 4;
+                grid-area: "pic3";
+            }
+        }
 }
+    
+        
 
 //////grey
 .grey-container{
     width: 1092px;
     position: relative;
-    max-width: 1092px;//changed by zahra
+    max-width: 1092px;
     height: 207.6px;
     background-color: $darkGray;
     border-radius: 17px;
@@ -436,7 +462,7 @@ header{
     align-items: center;
     cursor: pointer;
     @include smallDevice(){
-        max-width: 100%;
+        max-width: 98%;
         margin: 110px  auto 50px;
     }
     @include mediumDevice(){
@@ -450,7 +476,7 @@ header{
     flex-direction: column;
     justify-content: center;
     text-align: right !important;
-    padding: 0 50px;/////////
+    padding: 0 50px;
 
     .g-search-section{
         display: flex;
@@ -470,7 +496,7 @@ header{
             color: #FFFFFF;
             font-size: 26px;
             font-weight: bold;
-            margin-bottom: 2px; //////
+            margin-bottom: 2px;
             @include smallDevice(){
                 font-size: 16px;
                 text-align: center;
@@ -506,7 +532,6 @@ header{
         }
     }
     .icon-box{
-        // margin: 2px 3% ;
         width: 260px;
         display: flex;
         justify-content: space-around;
@@ -604,12 +629,11 @@ header{
     justify-content: space-between;
     background-color: #f2f4fb;
     border-radius: 16px;
-    // padding: 0 130px;
+
     
 }
 .methods{
-    // width: 586px;
-    width: 50%; //changed by zahra
+    width: 50%;
     height: 178px;
 
     @include smallDevice(){
