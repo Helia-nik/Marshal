@@ -6,8 +6,32 @@ $theBlue:#3979D9;
 $darkGray:#404040;
 
 $desktop:1200px;
-$mediumDvice:1024px;
+$mediumDvice:1140px;
 $smallDvice:768px;
+
+
+// $tinyDevice:646px;
+// $verySmallDevice:535px;
+// $veryTinyDevice:379px;
+
+
+// @mixin veryTinyDivice {
+//     @media (max-width:#{$veryTinyDevice}){
+//         @content;
+//     }
+// }
+
+// @mixin verySmallDevice{
+//     @media (max-width: #{$verySmallDevice}){
+//         @content;
+//     }
+// }
+
+// @mixin tinyDevice {
+//     @media (max-width: #{$tinyDevice}){
+//         @content;
+//     }  
+// }
 
 @mixin smallDevice{
     @media (max-width: #{$smallDvice}){
@@ -36,9 +60,13 @@ $smallDvice:768px;
     padding: 0;
 }
 body{
+    // width: 100vw;
     direction: rtl;
     background-color: $lightGray;
     font-family: Vazir FD !important;
+    min-width: 320px !important;
+    overflow-x: hidden;
+    
 }
 .jump:hover{
     transform: translateY(-5px);
@@ -354,42 +382,83 @@ header{
 
 
 ////////////////////////main2
-.main2 , .main3 {        /* + main3*/
+.main2 {   
+    width: 100vw;
+    height: auto;  
     display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.main2{
     h2 {
         font-family: peyda;
         font-weight: 900;
     }
     .blue-container {
+        max-width: 1140px;
         background-color: $theBlue;
-        border-radius: 30px;
-        width: 1140px;
-        height: 1171.45px;
-        margin-top: 70px;
+        border-radius: 20px;
+        padding:0 90px;
         position: relative;
-    }
-    .b-content {
-        width: 100%;
-        height: 1171.45px;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: -55px;
-        .b-section {
-            display: flex;
-            margin-bottom: 50px;
-            justify-content: space-around;
+        height: auto;
+        // width: 100%;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr) ;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 50px 2vw;
+        grid-template-areas:
+        "pic1 text1"
+        "text2 pic2"
+        "pic3 text3";
+ 
+        @include smallDevice(){
+            margin-top:150px;
+            padding: 0;
+            grid-template-columns: 1fr ;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-areas:
+            "pic1"
+            "text1"
+            "pic2"
+            "text2"
+            "pic3"
+            "text3";
         }
-        
-        .b-images {
-            width: 357px;
-            height: 357px;
-            position: relative;
+        .b-item{
+            // width: 357px;
+            // height: 357px;
+            width: 80%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -90px auto 100px;     
+
+            @include smallDevice(){
+                margin-bottom: 0;
+            }
+        }
+    }
+       
+    .b-images {
+        width: 357px !important;
+        height: 357px !important;
+        border-radius: 30px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include smallDevice(){
+            width: 90vw !important;
+            height: 90vw !important;
+            margin:-100px auto 0;
+        }
+
+
             h2 {
                 color: #000000;
                 font-size: 22px;
@@ -398,76 +467,135 @@ header{
                 position: absolute;
                 bottom: 20px;
                 right: 20px;
-            }
-            
-        }
+
+                @include smallDevice(){
+                    position: absolute;
+                    bottom: 20px;
+                    right: auto;
+                    left: auto;
+                }
+                }
+                
+        }                  
         .b-text {
-            width: 400px;
+            // width: 400px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: right;
+            text-align: right !important;
+
+            @include smallDevice(){
+                font-size: 15px !important;
+            }
             h2 {
                 font-family: peyda;
                 color: #FFFFFF;
                 font-size: 22px;
                 font-weight: 800;
                 margin-bottom: 15px;
+                text-align: center !important;
             }
             p {
                 color: $lightGray;
+                @include smallDevice(){
+                    text-align: center;
+                    font-size: 15px !important;
+                } 
             }
             
         }
+        .b-text1{
+            grid-area:"text1";
+            @include smallDevice(){
+                grid-area: "text1";
+                order: 1;
+            }
+        }
+        .b-text2{
+            grid-area: "text2";
+            @include smallDevice(){
+                grid-area: "text2";
+                order: 3;
+            }
+        }
+        .b-text3{
+            grid-area: "text3";
+            @include smallDevice(){
+                grid-area: "text3";
+                order: 5;
+            }
+        }
         .b-image1 {
             background-image: url("../image/image-4.png");
+            grid-area: "pic1"; 
+            @include smallDevice(){
+                order: 0;
+                grid-area: "pic1";
+            }
         }
         
         .b-image2 {
             background-image: url("../image/image-5.png");
-            width: 357px;
-            height: 357px;
+            grid-area: "pic2"; 
+            @include smallDevice(){
+                grid-area: "pic2";
+                order: 2;
+            }
         }
-        
         .b-image3 {
             background-image: url("../image/image-6.png");
-            width: 357px;
-            height: 357px;
+            grid-area: "pic3"; 
+            @include smallDevice(){
+                order: 4;
+                grid-area: "pic3";
+            }
         }
+}
+    
         
-    }
-}
 
-/////////////////////main3
-
-.main3{
-    flex-direction: column;
-}
+//////grey
 .grey-container{
     width: 1092px;
+    position: relative;
+    max-width: 1092px;
     height: 207.6px;
     background-color: $darkGray;
     border-radius: 17px;
-    margin-top: 110px;
+    margin: 110px auto 0  ;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    @include smallDevice(){
+        max-width: 98%;
+        margin: 110px  auto 50px;
+    }
+    @include mediumDevice(){
+        max-width: 97%;
+    }
 }
 .grey-content{
-    width: 1002px;
+    width: 100%;
     height: 121.6px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: right !important;
+    padding: 0 50px;
 
     .g-search-section{
         display: flex;
         justify-content: space-between;
         height: 68px;
         align-items: center;
+        margin-top: 5px;
+        @include smallDevice(){
+            flex-direction: column;
+            padding :15px 20px;
+            height: 140px;
+        }
     }
     .grey-text{
         h2{
@@ -475,8 +603,11 @@ header{
             color: #FFFFFF;
             font-size: 26px;
             font-weight: bold;
-            margin-bottom: 10px;
-            
+            margin-bottom: 2px;
+            @include smallDevice(){
+                font-size: 16px;
+                text-align: center;
+            }
         }
     }
     .search-box{
@@ -489,9 +620,18 @@ header{
         border: 1px solid grey;
         border-radius:  30px;
         padding: 0 20px;
+        margin: 2px 0 2px 5%; 
+        @include smallDevice(){
+            max-width: 81%;
+        }
         span{
             text-align: center;
             color: #BBBBBB;
+            @include smallDevice(){
+                padding: 8px 0;
+                overflow: hidden;
+
+            }
         }
         .search-icon{
             width: 17px;
@@ -499,15 +639,24 @@ header{
         }
     }
     .icon-box{
-        width: 280px;
+        width: 260px;
         display: flex;
         justify-content: space-around;
+
+        @include smallDevice(){
+            width: 100%;
+            margin: 20px 10px;
+        }
         .icon-service{
             width: 48px;
             height: 48px;
             transition: 0.3s;
             background-color: $darkGray;
             border-radius: 50%;
+            @include smallDevice(){
+                width: 38px;
+                height: 38px;
+            }
         }
         .icon-service:hover{
             background-color: $theBlue;
@@ -515,17 +664,35 @@ header{
         }
     }
 }
-////////////////////pic section
+///////////pic section
 .pic-container{
     width: 1140px;
+    max-width: 1140px;
     height: 178px;
     margin: 80px 0 150px 0;
     display: flex;
     justify-content: space-between;
     border-radius: 17px;
+
+
+    @include smallDevice(){
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    @include mediumDevice(){
+        max-width: 100%;
+    }
     .txt-btn {
         display: flex;
         flex-direction: column;
+        padding-left:8vw;
+
+        @include smallDevice(){
+            max-width: 100%;
+            padding-left:10vw;
+        }
     
         h2{
             font-family: peyda;
@@ -533,6 +700,10 @@ header{
             font-size: 26px;
             font-weight: bold;
             margin-bottom: 20px;
+            
+            @include smallDevice(){
+                font-size: 18px;
+            }
         }
         div{
             display: flex;
@@ -549,6 +720,7 @@ header{
             color: #000000;
             background-color: #FFFFFF;
             border-style: solid;
+            transition: all ease .3s;
         }
         .btn-arrow{
             color: #4E7FEA;
@@ -564,22 +736,34 @@ header{
     justify-content: space-between;
     background-color: #f2f4fb;
     border-radius: 16px;
+
     
 }
 .methods{
-    width: 586px;
+    width: 50%;
     height: 178px;
+
+    @include smallDevice(){
+        width: 100%;
+        margin-bottom: 20px;
+    }
     .hands{
         width: 123px;
         height: 134px;
     }
 }
 .developers{
-    width: 448px;
+    // width: 448px;
+    width: 48%;
     height: 178px;
+    @include smallDevice(){
+        width: 100%;
+    }
     .box{
         width: 133px;
         height: 135px;
+
+        
     }
 }
 
