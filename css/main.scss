@@ -196,6 +196,9 @@ header{
                 svg{
                     margin-top: 5px;
                 }
+                .svg1{
+                    margin-bottom: 5px;
+                }
                 .svg2{
                     display: none;
                     @include smallDevice(){
@@ -215,7 +218,7 @@ header{
                     }
                 }
                 p{
-                    padding-right: 15px;
+                    padding-right: 10px;
                 }
                 svg{
                     margin-top: 5px;
@@ -272,6 +275,12 @@ header{
         width: 71.5%;
         margin-left: auto;
         margin-right: auto;
+        .br{
+            display: none;
+            @include smallDevice(){
+                display: block;
+            }
+        }
     }
     h1{
         font-size: 44px ;
@@ -417,7 +426,7 @@ header{
             margin-top:150px;
             padding: 0;
             grid-template-columns: 1fr ;
-            grid-template-rows: repeat(6, 1fr);
+            grid-template-rows: repeat(6, auto);
             grid-template-areas:
             "pic1"
             "text1"
@@ -487,6 +496,7 @@ header{
 
             @include smallDevice(){
                 font-size: 15px !important;
+                padding: 60px;
             }
             h2 {
                 font-family: peyda;
@@ -823,16 +833,14 @@ header{
             width: 100vw;
             font-size: 12px;
             margin-top: 30px;
-            padding-right: 10px;
-
 
         }
     .f1{
-        padding-right: 10px;
         width: 25%;
         padding-right: 20px;
         @include smallDevice(){
             grid-area: 1 / 1 / 2 / 2;
+            width: auto !important;
         }
         li{
             list-style: none;
@@ -845,7 +853,7 @@ header{
         width: 25%;
         padding-right: 20px;
         @include smallDevice(){
-            width: 50%;
+            width: auto !important;
             grid-area: 1 / 2 / 2 / 3;
         }
         li{
@@ -864,11 +872,12 @@ header{
             grid-area: 2 / 1 / 3 / 3;
             flex-direction: column-reverse;
             margin-top: 20px;
+            text-align: center;
         }
         .address{
             color: #404040;
             @include smallDevice(){
-                width: 100vw;
+                width: 95vw;
                 margin-top: 10px;
                 font-size: 10px;
             }
@@ -922,8 +931,11 @@ header{
             height: 180px;
             flex-direction: column;
             margin-top: 30px;
-            margin-right: 0;
             width: 94%;
+            margin-top: 30px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 !important;
         }
         img{
             bottom: 65px;

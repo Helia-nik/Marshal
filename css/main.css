@@ -190,6 +190,10 @@ header .navbar .btn .download svg {
   margin-top: 5px;
 }
 
+header .navbar .btn .download .svg1 {
+  margin-bottom: 5px;
+}
+
 header .navbar .btn .download .svg2 {
   display: none;
 }
@@ -216,7 +220,7 @@ header .navbar .btn .download .svg2 {
 }
 
 header .navbar .btn .download p {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 header .navbar .btn .download svg {
@@ -272,6 +276,16 @@ header .navbar .burger div {
   width: 71.5%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.tehran .tehran-text .br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .tehran .tehran-text .br {
+    display: block;
+  }
 }
 
 .tehran h1 {
@@ -474,8 +488,8 @@ header .navbar .burger div {
     padding: 0;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (1fr)[6];
-        grid-template-rows: repeat(6, 1fr);
+    -ms-grid-rows: (auto)[6];
+        grid-template-rows: repeat(6, auto);
         grid-template-areas: "pic1" "text1" "pic2" "text2" "pic3" "text3";
   }
 }
@@ -559,6 +573,7 @@ header .navbar .burger div {
 @media (max-width: 768px) {
   .main2 .b-text {
     font-size: 15px !important;
+    padding: 60px;
   }
 }
 
@@ -1065,12 +1080,10 @@ header .navbar .burger div {
     width: 100vw;
     font-size: 12px;
     margin-top: 30px;
-    padding-right: 10px;
   }
 }
 
 .footer-container .f1 {
-  padding-right: 10px;
   width: 25%;
   padding-right: 20px;
 }
@@ -1082,6 +1095,7 @@ header .navbar .burger div {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 1 / 1 / 2 / 2;
+    width: auto !important;
   }
 }
 
@@ -1098,7 +1112,7 @@ header .navbar .burger div {
 
 @media (max-width: 768px) {
   .footer-container .f2 {
-    width: 50%;
+    width: auto !important;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 2;
@@ -1140,6 +1154,7 @@ header .navbar .burger div {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin-top: 20px;
+    text-align: center;
   }
 }
 
@@ -1149,7 +1164,7 @@ header .navbar .burger div {
 
 @media (max-width: 768px) {
   .footer-container .f3 .address {
-    width: 100vw;
+    width: 95vw;
     margin-top: 10px;
     font-size: 10px;
   }
@@ -1232,8 +1247,11 @@ header .navbar .burger div {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 30px;
-    margin-right: 0;
     width: 94%;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 !important;
   }
 }
 
