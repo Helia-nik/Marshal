@@ -10,29 +10,6 @@ $mediumDvice:1140px;
 $smallDvice:768px;
 
 
-// $tinyDevice:646px;
-// $verySmallDevice:535px;
-// $veryTinyDevice:379px;
-
-
-// @mixin veryTinyDivice {
-//     @media (max-width:#{$veryTinyDevice}){
-//         @content;
-//     }
-// }
-
-// @mixin verySmallDevice{
-//     @media (max-width: #{$verySmallDevice}){
-//         @content;
-//     }
-// }
-
-// @mixin tinyDevice {
-//     @media (max-width: #{$tinyDevice}){
-//         @content;
-//     }  
-// }
-
 @mixin smallDevice{
     @media (max-width: #{$smallDvice}){
         @content;
@@ -59,8 +36,13 @@ $smallDvice:768px;
     margin: 0;
     padding: 0;
 }
+html{
+    width: 100%;
+    scroll-behavior:smooth;
+}
 body{
-    // width: 100vw;
+    width: 100%;
+    scroll-behavior:smooth;
     direction: rtl;
     background-color: $lightGray;
     font-family: Vazir FD !important;
@@ -268,8 +250,33 @@ header{
     background-size: cover;
     height: 690px;
     margin-top: 84px;
+    position: relative;
     @include smallDevice{ 
         background-image: url(../image/tehransmall.jpg);
+    }
+    .go-down{
+        display: none;
+        cursor: pointer;
+        @include smallDevice(){
+            cursor: pointer;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            bottom: 10px;
+            right: 50%;
+            transition: 0.3s;
+            
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
     .tehran-text{
         width: 71.5%;
@@ -674,6 +681,13 @@ header{
         }
     }
 }
+.icon-container:hover {
+    .pathh{
+        fill: $theBlue !important;
+        stroke:$theBlue;
+    }
+    
+}
 ///////////pic section
 .pic-container{
     width: 1140px;
@@ -833,14 +847,16 @@ header{
             width: 100vw;
             font-size: 12px;
             margin-top: 30px;
+            padding-right: 10px;
+
 
         }
     .f1{
+        padding-right: 10px;
         width: 25%;
         padding-right: 20px;
         @include smallDevice(){
             grid-area: 1 / 1 / 2 / 2;
-            width: auto !important;
         }
         li{
             list-style: none;
@@ -853,7 +869,7 @@ header{
         width: 25%;
         padding-right: 20px;
         @include smallDevice(){
-            width: auto !important;
+            width: 50%;
             grid-area: 1 / 2 / 2 / 3;
         }
         li{
@@ -872,12 +888,11 @@ header{
             grid-area: 2 / 1 / 3 / 3;
             flex-direction: column-reverse;
             margin-top: 20px;
-            text-align: center;
         }
         .address{
             color: #404040;
             @include smallDevice(){
-                width: 95vw;
+                width: 100vw;
                 margin-top: 10px;
                 font-size: 10px;
             }
@@ -931,11 +946,8 @@ header{
             height: 180px;
             flex-direction: column;
             margin-top: 30px;
+            margin-right: 0;
             width: 94%;
-            margin-top: 30px;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 !important;
         }
         img{
             bottom: 65px;

@@ -5,7 +5,14 @@
   padding: 0;
 }
 
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
 body {
+  width: 100%;
+  scroll-behavior: smooth;
   direction: rtl;
   background-color: #f8f9fd;
   font-family: Vazir FD !important;
@@ -264,11 +271,46 @@ header .navbar .burger div {
   background-size: cover;
   height: 690px;
   margin-top: 84px;
+  position: relative;
 }
 
 @media (max-width: 768px) {
   .tehran {
     background-image: url(../image/tehransmall.jpg);
+  }
+}
+
+.tehran .go-down {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .tehran .go-down {
+    cursor: pointer;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .tehran .go-down img {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -847,6 +889,11 @@ header .navbar .burger div {
   border-radius: 50%;
 }
 
+.icon-container:hover .pathh {
+  fill: #3979D9 !important;
+  stroke: #3979D9;
+}
+
 .pic-container {
   width: 1140px;
   max-width: 1140px;
@@ -1080,10 +1127,12 @@ header .navbar .burger div {
     width: 100vw;
     font-size: 12px;
     margin-top: 30px;
+    padding-right: 10px;
   }
 }
 
 .footer-container .f1 {
+  padding-right: 10px;
   width: 25%;
   padding-right: 20px;
 }
@@ -1095,7 +1144,6 @@ header .navbar .burger div {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 1 / 1 / 2 / 2;
-    width: auto !important;
   }
 }
 
@@ -1112,7 +1160,7 @@ header .navbar .burger div {
 
 @media (max-width: 768px) {
   .footer-container .f2 {
-    width: auto !important;
+    width: 50%;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 2;
@@ -1154,7 +1202,6 @@ header .navbar .burger div {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin-top: 20px;
-    text-align: center;
   }
 }
 
@@ -1164,7 +1211,7 @@ header .navbar .burger div {
 
 @media (max-width: 768px) {
   .footer-container .f3 .address {
-    width: 95vw;
+    width: 100vw;
     margin-top: 10px;
     font-size: 10px;
   }
@@ -1247,11 +1294,8 @@ header .navbar .burger div {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 30px;
+    margin-right: 0;
     width: 94%;
-    margin-top: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 !important;
   }
 }
 
