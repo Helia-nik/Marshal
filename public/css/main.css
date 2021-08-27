@@ -120,7 +120,7 @@ header .navbar .menu .close:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    right: -105vw;
+    right: -108vw;
     height: 100vh;
     position: absolute;
     background-color: #3979D9;
@@ -1128,6 +1128,7 @@ header .navbar .burger div {
     font-size: 12px;
     margin-top: 30px;
     padding-right: 10px;
+    overflow: hidden;
   }
 }
 
@@ -1202,6 +1203,9 @@ header .navbar .burger div {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin-top: 20px;
+    padding: 0;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 
@@ -1225,9 +1229,10 @@ header .navbar .burger div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 98vw;
+    width: 75vw;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-right: -40px;
   }
 }
 
@@ -1294,7 +1299,6 @@ header .navbar .burger div {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 30px;
-    margin-right: 0;
     width: 94%;
   }
 }
