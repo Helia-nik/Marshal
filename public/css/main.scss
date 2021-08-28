@@ -9,7 +9,7 @@ $desktop:1200px;
 $mediumDvice:1140px;
 $smallDvice:768px;
 
-
+//media quesries
 @mixin smallDevice{
     @media (max-width: #{$smallDvice}){
         @content;
@@ -29,7 +29,7 @@ $smallDvice:768px;
 }
 
 
-
+///////////////////////
 
 * {
     box-sizing: border-box;
@@ -50,6 +50,8 @@ body{
     overflow-x: hidden;
     
 }
+
+//////////button hover
 .jump:hover{
     transform: translateY(-5px);
     cursor: pointer;
@@ -119,7 +121,7 @@ header{
             }
             @include smallDevice(){
                 flex-direction: column;
-                right: -105vw;
+                right: -108vw;
                 height: 100vh;
                 position:absolute ;
                 background-color: $theBlue;
@@ -269,7 +271,7 @@ header{
             justify-content: center;
             border-radius: 50%;
             bottom: 10px;
-            right: 50%;
+            right: 48%;
             transition: 0.3s;
             
             img{
@@ -848,7 +850,7 @@ header{
             font-size: 12px;
             margin-top: 30px;
             padding-right: 10px;
-
+            overflow: hidden;
 
         }
     .f1{
@@ -888,6 +890,9 @@ header{
             grid-area: 2 / 1 / 3 / 3;
             flex-direction: column-reverse;
             margin-top: 20px;
+            padding: 0;
+            justify-self: center;
+
         }
         .address{
             color: #404040;
@@ -901,8 +906,9 @@ header{
             @include smallDevice(){
                 display: flex;
                 align-items: center;
-                width: 98vw;
+                width: 75vw;
                 justify-content: space-around;
+                margin-right: -40px;
             }
         }
         .f3-2{
@@ -946,7 +952,6 @@ header{
             height: 180px;
             flex-direction: column;
             margin-top: 30px;
-            margin-right: 0;
             width: 94%;
         }
         img{
