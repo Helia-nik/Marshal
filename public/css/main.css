@@ -304,7 +304,7 @@ header .navbar .burger div {
             justify-content: center;
     border-radius: 50%;
     bottom: 10px;
-    right: 50%;
+    right: 48%;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
